@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+</head>
+<body>
+<div class="container">
+  <div class="form-container">
+    <h2>Login to Your Account</h2>
+    <form id="login-form">
+      <div class="input-container">
+        <input type="text" id="username" placeholder="Username" required>
+        <label for="username">Username</label>
+      </div>
+      <div class="input-container">
+        <input type="password" id="password" placeholder="Password" required>
+        <label for="password">Password</label>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <div class="separator">
+      <span>OR</span>
+    </div>
+    <button id="signup-btn">Sign Up</button>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-container input:focus {
+  border-color: #555;
+}
+
+.input-container label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #999;
+  font-size: 12px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: -12px;
+  left: 5px;
+  font-size: 10px;
+  color: #333;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3897f0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #357ae8;
+}
+
+.separator {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.separator span {
+  color: #999;
+  font-size: 14px;
+}
+
+#signup-btn {
+  background-color: transparent;
+  border: none;
+  color: #3897f0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#signup-btn:hover {
+  text-decoration: underline;
+}
+
+</style>
+</html>
